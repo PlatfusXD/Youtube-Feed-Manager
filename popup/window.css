@@ -1,0 +1,111 @@
+body {
+    font-family: "Google Sans", sans-serif;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+}
+
+#ext-enabler {
+    width: 160px;
+    height: 40px;
+    margin: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+#ext-enabler:hover {
+    cursor: pointer;
+}
+
+.active {
+    color: white;
+    background-color: red;
+    transition: all .1s ease-in-out;
+}
+
+.active:hover {
+    background-color: #e00000;
+}
+
+.not-active {
+    color: black;
+    background-color: #ececec;
+    transition: all .1s ease-in-out;
+}
+
+.not-active:hover {
+    background-color: #acacac;
+    color: white;
+}
+
+#feed-enabler {
+    margin: 20px;
+    font-weight: bold;
+}
+
+#feed-checkbox {
+    margin-right: 10px;
+}
+
+#cat-checkbox {
+    margin-right: 10px;
+}
+
+#trend-checkbox {
+    margin-right: 10px;
+}
+
+#channel-name {
+    margin: 20px;
+    width: 140px;
+    height: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #e7e7e7;
+    border-radius: 5px;
+}
+
+#channel-name::placeholder {
+    color: #acacac;
+}
+
+#hide-channel {
+    width: 160px;
+    padding: 10px;
+    color: white;
+    background-color: #ff0000;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: bold;
+    transition: all .1s ease-in-out;
+    margin-bottom: 20px;
+}
+
+#hide-channel:hover {
+    background-color: #e00000;
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+    color: #acacac;
+    margin-left: 20px;
+    transition: all .1s ease-in-out;
+}
+
+.link:hover {
+    color: #636363;
+}
+
+svg {
+    width: 1em;
+    height: 1em;
+}

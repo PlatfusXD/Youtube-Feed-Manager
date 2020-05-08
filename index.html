@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Youtube Feed Manager</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:100,300,400,500,700,900,100i,300i,400i,500i,700i,900i">
+</head>
+<body>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h1>Add channel</h1>
+            <span class="close">&times;</span>
+            <div class="clear"></div>
+            <input id="texthold" type="text" placeholder="Channel name...">
+            <button id="sbmt">
+                <svg class="svg-inline--fa fa-paper-plane fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="paper-plane" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"></path></svg>
+            </button>
+        </div>
+    </div>
+    <div class="logo-wrapper">
+        <span class="helper"></span><img src="img/logo.png" alt="" class="logo">
+    </div>
+    <div class="content-wrapper">
+        <div class="content">
+            <h1 class="title">Blocked</h1>
+            <div class="actions">
+                <div class="add-channel" id="a-ch"">
+                    <svg class="svg-inline--fa fa-plus-circle fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"></path></svg>
+                    <span>Add channel</span>
+                </div>
+                <div class="hide-feed" id="h-f"">
+                    <input type="checkbox" id="hide-feed"><label for="hide-feed">Hide feed</label>
+                </div>
+				<div class="hide-feed" id="h-c"">
+                    <input type="checkbox" id="hide-categories"><label for="hide-feed">Hide Categories</label>
+                </div>
+				<div class="hide-feed" id="h-t-t"">
+                    <input type="checkbox" id="hide-trends"><label for="hide-feed">Hide Trendings Tab</label>
+                </div>
+            </div>
+            <div class="channels">
+                <!--<div class="channel">
+                    <span class="channel-name">Channel name</span>
+                    <div class="restore" ">
+                        <svg class="svg-inline--fa fa-trash fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"></path></svg>
+                        <span>Restore</span>
+                    </div>
+                </div>-->
+                
+            </div>
+        </div>
+    </div>
+    <!--<script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-replace-svg="nest"></script>-->
+    <script type="text/javascript" src="setscript.js"></script>
+</body>
+</html>
