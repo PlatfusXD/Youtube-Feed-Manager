@@ -79,7 +79,7 @@ const rt = function(){
 					while(i<docs.length){
 						if(!docs[i].hasAttribute("page-subtype")){
 							docs[i].style.display = "none";
-							alert("Hello");
+							//alert("Hello");
 							break;
 						}
 						i++;
