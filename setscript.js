@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var hid = document.getElementById('h-f');
     var cat = document.getElementById('h-c');
     var trend = document.getElementById('h-t-t');
+    var yt = document.getElementById('h-y');
     // onClick's logic below:
     link.addEventListener('click', function() {
         submitChannel();
@@ -19,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 	trend.addEventListener('change',function(){
 		TrendChange();
+	});
+	yt.addEventListener('change', function(){
+		hideYt();
 	});
 });
 
@@ -69,6 +73,24 @@ document.addEventListener('DOMContentLoaded', function() {
 				});
 			}catch{
 				chrome.storage.sync.set({"trend": false});
+			}
+			try{
+			chrome.storage.sync.get("trend",function(data){
+					var obj = JSON.parse(JSON.stringify(data));
+					var pgs = obj.trend;
+					document.getElementById('hide-trends').checked = pgs;
+				});
+			}catch{
+				chrome.storage.sync.set({"trend": false});
+			}
+			try{
+				chrome.storage.sync.get("ytHide",function(data){
+					var obj = JSON.parse(JSON.stringify(data));
+					var pgs = obj.ytHide;
+					document.getElementById('hide-youtube').checked = pgs;
+				});
+			}catch{
+				chrome.storage.sync.set({"ytHide": false});
 			}
 			
 			chrome.storage.sync.get("block",
@@ -149,6 +171,11 @@ document.addEventListener('DOMContentLoaded', function() {
         function hideFeed() {
 			var hide = document.getElementById('hide-feed').checked;
 			chrome.storage.sync.set({"feedHide": hide});
+        }
+        
+        function hideYt(){
+        	var hide = document.getElementById('hide-youtube').checked;
+		chrome.storage.sync.set({"ytHide": hide});
         }
         
         function restoreChannel(name) {

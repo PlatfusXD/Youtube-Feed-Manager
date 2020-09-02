@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var cat = document.getElementById('cat-checkbox');
     var enbl = document.getElementById('ext-enabler');
     var trend = document.getElementById('trend-checkbox');
+    var yt = document.getElementById('yt-checkbox');
 	
     // onClick's logic below:
     link.addEventListener('click', function() {
@@ -20,6 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 	trend.addEventListener('click',function(){
 		trendChange();
+	});
+	yt.addEventListener('change', function(){
+		HideYt();
 	});
 });
 
@@ -66,7 +70,6 @@ function trendChange(){
 }
 
 function hideChannel() {
-    //piękną funkcję ci kolejną zrobiłem widzisz dobry człowiek jestem xdd
 	var ChannelName = document.getElementById("channel-name").value;
 			chrome.storage.sync.get("block",
 			function(data){
@@ -85,6 +88,12 @@ function hideChannel() {
 function CheckCheck(){
 	var hide = document.getElementById('feed-checkbox').checked;
 	chrome.storage.sync.set({"feedHide": hide});
+}
+
+function HideYt(){
+	let hide = document.getElementById('yt-checkbox').checked;
+	console.log(hide);
+	chrome.storage.sync.set({"ytHide": hide});
 }
 
 function Set(){
@@ -137,6 +146,15 @@ function Set(){
 			
 	}catch{
 		chrome.storage.sync.set({"trend": false});
+	}
+	try{
+		chrome.storage.sync.get("ytHide",function(data){
+				var obj = JSON.parse(JSON.stringify(data));
+				var pgs = obj.ytHide;
+				document.getElementById('yt-checkbox').checked = pgs;
+			});
+	}catch{
+		chrome.storage.sync.set({"ytHide": false});
 	}
 					
 }

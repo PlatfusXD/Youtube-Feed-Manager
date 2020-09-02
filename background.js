@@ -6,7 +6,7 @@ var flag1 = false;
 document.onload = myMain();
 
 const Dlt = function(){
-	
+			
 	try{
 		var conts = document.querySelector('.grid[page-subtype="home"]').querySelector("#contents").querySelectorAll("ytd-rich-item-renderer");
 		chrome.storage.sync.get("feedHide",function(data2){
@@ -136,9 +136,11 @@ function myMain (evt) {
 function Start(){
 if (window.location.href.indexOf("youtube") > -1) 
 	{
+			
 		
 		// Get All contents
 		SetPageObserve();
+		
 		const ytd = document.querySelector("ytd-page-manager");
 		//alert(ytd);
 		const observer2 = new MutationObserver(rt);
@@ -148,6 +150,15 @@ if (window.location.href.indexOf("youtube") > -1)
 		
 		var clickedEl = null;
 
+		chrome.storage.sync.get("ytHide",function(data){
+					var obj = JSON.parse(JSON.stringify(data));
+					var pgs = obj.ytHide;
+					if(pgs){
+						document.querySelectorAll("ytd-app")[0].style.display = "none";	
+					}
+						
+				});
+		
 		document.addEventListener("mousedown", function(event){
 		//right click
 		if(event.button == 2) { 
