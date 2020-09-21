@@ -1,7 +1,5 @@
-function block(info, tab){
-	chrome.tabs.sendMessage(tab.id, "getClickedEl", function() {
-    });
-	
+function block(info, tab) {
+	chrome.tabs.sendMessage(tab.id, "getClickedEl", function() {});
 }
 
 
