@@ -98,6 +98,17 @@ function HideYt(){
 
 function Set(){
 	try{
+		chrome.storage.sync.get("popUpHide",function(data){
+		var obj = JSON.parse(JSON.stringify(data));
+		var pgs = obj.popUpHide;
+		if(pgs){
+			document.querySelector("body").style.display = "none";
+		}
+		});
+	}catch{
+		chrome.storage.sync.set({"popUpHide": false});
+	}	
+	try{
 	chrome.storage.sync.get("feedHide",function(data){
 				var obj = JSON.parse(JSON.stringify(data));
 				var pgs = obj.feedHide;

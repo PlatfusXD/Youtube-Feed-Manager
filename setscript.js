@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var cat = document.getElementById('h-c');
     var trend = document.getElementById('h-t-t');
     var yt = document.getElementById('h-y');
+    var pop = document.getElementById('h-p');
     // onClick's logic below:
     link.addEventListener('click', function() {
         submitChannel();
@@ -23,6 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 	yt.addEventListener('change', function(){
 		hideYt();
+	});
+	pop.addEventListener('change', function(){
+		hidePopUp();
 	});
 });
 
@@ -91,6 +95,15 @@ document.addEventListener('DOMContentLoaded', function() {
 				});
 			}catch{
 				chrome.storage.sync.set({"ytHide": false});
+			}
+			try{
+				chrome.storage.sync.get("popUpHide",function(data){
+				var obj = JSON.parse(JSON.stringify(data));
+				var pgs = obj.popUpHide;
+				document.getElementById('hide-popup').checked = pgs;
+				});
+			}catch{
+				chrome.storage.sync.set({"popUpHide": false});
 			}
 			
 			chrome.storage.sync.get("block",
@@ -175,8 +188,13 @@ document.addEventListener('DOMContentLoaded', function() {
         
         function hideYt(){
         	var hide = document.getElementById('hide-youtube').checked;
-		chrome.storage.sync.set({"ytHide": hide});
+			chrome.storage.sync.set({"ytHide": hide});
         }
+		
+		function hidePopUp(){
+			var hide = document.getElementById('hide-popup').checked;
+			chrome.storage.sync.set({"popUpHide": hide});
+		}
         
         function restoreChannel(name) {
 			chrome.storage.sync.get("block",
