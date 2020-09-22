@@ -11,36 +11,37 @@ const Dlt = function() {
 		chrome.storage.sync.get("feedHide", function(data2) {
 			let obj2 = JSON.parse(JSON.stringify(data2));
 			let pgs2 = obj2.feedHide;
-			if(pgs2 && window.location.href.indexOf("channel") === -1) document.querySelector('.grid[page-subtype="home"]').querySelector("#primary").style.display = "none";
-			else {
-				chrome.storage.sync.get("enbl", function(data3) {
-					const objs = JSON.parse(JSON.stringify(data3));
-					const value = objs.enbl;
-					if(value) {
-						chrome.storage.sync.get("block",
-						function(data) {
-							const obj = JSON.parse(JSON.stringify(data));
-							const pgs = obj.block;
-							let n = 0;
-							for(let i = 0; i < conts.length; ++i) {
-								try {
-									const txt = conts[i].querySelector("#channel-name").querySelector("a").textContent;
-									if(conts[i].querySelector("#avatar-link").getAttribute("title") === "undefined") {
-										// Here for Check weather
-									}
-									for(let j = 0; j < pgs.length; j++) {
-										if(txt === pgs[j]) {
-											conts[i].style.display = "none";
-										}
-										n++;
-									}
-								}
-								catch {}
+			if(pgs2 && window.location.href.indexOf("channel") === -1){
+				document.querySelector('.grid[page-subtype="home"]').querySelector("#primary").style.display = "none";
+				return;
+			}
+			chrome.storage.sync.get("enbl", function(data3) {
+			const objs = JSON.parse(JSON.stringify(data3));
+			const value = objs.enbl;
+			if(value) {
+				chrome.storage.sync.get("block",
+				function(data) {
+					const obj = JSON.parse(JSON.stringify(data));
+					const pgs = obj.block;
+					let n = 0;
+					for(let i = 0; i < conts.length; ++i) {
+						try {
+							const txt = conts[i].querySelector("#channel-name").querySelector("a").textContent;
+							if(conts[i].querySelector("#avatar-link").getAttribute("title") === "undefined") {
+								// Here for Check weather
 							}
-						});
+							for(let j = 0; j < pgs.length; j++) {
+								if(txt === pgs[j]) {
+									conts[i].style.display = "none";
+								}
+								n++;
+							}
+						}
+						catch {}
 					}
 				});
-			}
+				}
+			});
 		});
 	}
 	catch(e) {}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1c1bf53e-cf5f-45ff-b4cf-3a33be1e8812" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/background.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hpCD11fwhCd2RX8dOJ1pVZT6U7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1c1bf53e-cf5f-45ff-b4cf-3a33be1e8812" name="Default Changelist" comment="" />
+      <created>1600698526915</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600698526915</updated>
+      <workItem from="1600698531140" duration="1230000" />
+      <workItem from="1600795440795" duration="737000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="738" y="391" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600699667812">
+      <screen x="0" y="27" width="2560" height="1413" />
+    </state>
+    <state x="738" y="391" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.2560.1413/2560.618.1920.1080@0.27.2560.1413" timestamp="1600699667812" />
+    <state x="1037" y="614" width="465" height="266" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1600699536523">
+      <screen x="0" y="27" width="2560" height="1413" />
+    </state>
+    <state x="1037" y="614" width="465" height="266" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.27.2560.1413/2560.618.1920.1080@0.27.2560.1413" timestamp="1600699536523" />
+    <state x="784" y="368" width="992" height="737" key="SettingsEditor" timestamp="1600699440470">
+      <screen x="0" y="27" width="2560" height="1413" />
+    </state>
+    <state x="784" y="368" width="992" height="737" key="SettingsEditor/0.27.2560.1413/2560.618.1920.1080@0.27.2560.1413" timestamp="1600699440470" />
+  </component>
+</project>
